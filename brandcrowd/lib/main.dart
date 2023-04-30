@@ -1,6 +1,6 @@
-import 'package:brandcrowd/constants.dart';
 import 'package:brandcrowd/routs.dart';
 import 'package:brandcrowd/screens/splash/splash_screen.dart';
+import 'package:brandcrowd/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,17 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: "Muli",
-        textTheme: const TextTheme(
-          // ignore: deprecated_member_use
-          bodyText1: TextStyle(color: kTextColor),
-          // ignore: deprecated_member_use
-          bodyText2: TextStyle(color: kTextColor),
-        ),
-      ),
+      title: 'BrandCrowd app',
+      theme: theme(),
       initialRoute: SplashScreen.routeName,
       routes: routes,
     );

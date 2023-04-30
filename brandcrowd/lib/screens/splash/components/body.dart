@@ -2,6 +2,7 @@
 
 import 'package:brandcrowd/components/default_button.dart';
 import 'package:brandcrowd/constants.dart';
+import 'package:brandcrowd/screens/sign_in/sign_in_screen.dart';
 import 'package:brandcrowd/screens/splash/components/splash_content.dart';
 
 import '../../../size_config.dart';
@@ -66,7 +67,10 @@ class _BodyState extends State<Body> {
                         Spacer(flex: 3),
                         DefaultButton(
                           text: "Continue",
-                          press: () {},
+                          press: () {
+                            Navigator.pushNamed(
+                                context, SignInScreen.routeName);
+                          },
                         ),
                         Spacer(),
                       ],
