@@ -3,7 +3,7 @@
 import 'package:brandcrowd/components/default_button.dart';
 import 'package:brandcrowd/constants.dart';
 import 'package:brandcrowd/screens/sign_in/sign_in_screen.dart';
-import 'package:brandcrowd/screens/splash/components/splash_content.dart';
+import 'package:brandcrowd/screens/customer_splash/components/customer_splash_content.dart';
 
 import '../../../size_config.dart';
 import 'package:flutter/material.dart';
@@ -18,15 +18,16 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List splashData = [
     {
-      "text": "Welcome to BrandCrowd, Let’s shop!",
+      "text": "Welcome to BrandCrowd, Let's start",
       "image": "assets/images/splash_1.png"
     },
     {
-      "text": "We help people connect with store \n around the country",
+      "text": "Open your own online buisness in one click",
       "image": "assets/images/splash_2.png"
     },
     {
-      "text": "We show the easy way to shop. \n Just stay at home with us",
+      "text":
+          "Manage your business from home \n and reach customers around the world easily ",
       "image": "assets/images/splash_3.png"
     },
   ];

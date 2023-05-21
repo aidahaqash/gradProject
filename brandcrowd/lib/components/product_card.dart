@@ -22,7 +22,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
+      padding: EdgeInsets.symmetric(vertical: getProportionateScreenWidth(0)),
       child: SizedBox(
         width: getProportionateScreenWidth(width),
         child: GestureDetector(
@@ -48,7 +48,6 @@ class ProductCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
               Text(
                 product.title,
                 style: const TextStyle(color: Colors.black),

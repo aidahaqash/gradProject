@@ -11,8 +11,8 @@ class Categories extends StatelessWidget {
     List<Map<String, dynamic>> categories = [
       {"icon": "assets/icons/woman.svg", "text": "Women"},
       {"icon": "assets/icons/man.svg", "text": "Men"},
-      {"icon": "assets/icons/kid.svg", "text": "Shoes"},
-      {"icon": "assets/icons/gaming.svg", "text": "Lingerie"},
+      {"icon": "assets/icons/kid.svg", "text": "Kids"},
+      {"icon": "assets/icons/gaming.svg", "text": "Gaming"},
       {"icon": "assets/icons/sport.svg", "text": "Sport"},
     ];
     return Padding(

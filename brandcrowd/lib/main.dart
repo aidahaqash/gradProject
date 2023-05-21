@@ -1,5 +1,5 @@
 import 'package:brandcrowd/routs.dart';
-import 'package:brandcrowd/screens/splash/splash_screen.dart';
+import 'package:brandcrowd/screens/welcome/welcome_screen.dart';
 import 'package:brandcrowd/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'BrandCrowd app',
       theme: theme(),
-      initialRoute: SplashScreen.routeName,
+      initialRoute: WelcomeScreen.routeName,
       routes: routes,
     );
   }

@@ -1,5 +1,4 @@
-import 'package:brandcrowd/screens/splash/components/body.dart';
-
+import 'package:brandcrowd/screens/customer_splash/components/body.dart';
 import 'package:flutter/material.dart';
 
 // ignore: use_key_in_widget_constructors
