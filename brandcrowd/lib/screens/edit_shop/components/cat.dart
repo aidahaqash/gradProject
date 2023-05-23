@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../size_config.dart';
+import '../../owner_cat_view/owner_cat_screen.dart';
 
 class Categories extends StatelessWidget {
   @override
@@ -27,7 +28,9 @@ class Categories extends StatelessWidget {
                 icon: categories[index]["icon"],
                 text: categories[index]["text"],
                 color: const Color(0xFFFFECDF),
-                press: () {},
+                press: () {
+                  Navigator.pushNamed(context, ViewCatScreen.routeName);
+                },
               ),
             ),
           ),

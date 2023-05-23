@@ -1,15 +1,23 @@
+import 'package:brandcrowd/screens/account/user_account_screen.dart';
+import 'package:brandcrowd/screens/add_ad/add_ad_screen.dart';
 import 'package:brandcrowd/screens/add_cat/add_cat_screen.dart';
 import 'package:brandcrowd/screens/add_product/add_product_screen.dart';
 import 'package:brandcrowd/screens/add_shop/add_shop_screen.dart';
+import 'package:brandcrowd/screens/all_products/all_products_screen.dart';
 import 'package:brandcrowd/screens/cart/cart_screen.dart';
+import 'package:brandcrowd/screens/change_password/change_password_screen.dart';
 import 'package:brandcrowd/screens/complete_profile/complete_profile_screen.dart';
 import 'package:brandcrowd/screens/customer_shops/customer_shops_screen.dart';
+import 'package:brandcrowd/screens/dashboard/dashboard_screen.dart';
 import 'package:brandcrowd/screens/details/details_screen.dart';
+import 'package:brandcrowd/screens/edit_product/edit_product_screen.dart';
 import 'package:brandcrowd/screens/edit_shop/edit_shop_screen.dart';
 import 'package:brandcrowd/screens/forgot_password/forgot_password_screen.dart';
 import 'package:brandcrowd/screens/home/home_screen.dart';
 import 'package:brandcrowd/screens/login_success/login_success_screen.dart';
 import 'package:brandcrowd/screens/otp/otp_screen.dart';
+import 'package:brandcrowd/screens/owner_cat_view/owner_cat_screen.dart';
+import 'package:brandcrowd/screens/owner_profile/owner_profile_screen.dart';
 import 'package:brandcrowd/screens/owner_shops/owner_shops_screen.dart';
 import 'package:brandcrowd/screens/profile/profile_screen.dart';
 
@@ -38,4 +46,12 @@ final Map<String, WidgetBuilder> routes = {
   EditShopScreen.routeName: (context) => EditShopScreen(),
   AddProductScreen.routeName: (context) => AddProductScreen(),
   AddCatScreen.routeName: (context) => AddCatScreen(),
+  AllProductsScreen.routeName: (context) => AllProductsScreen(),
+  EditProductScreen.routeName: (context) => EditProductScreen(),
+  ViewCatScreen.routeName: (context) => ViewCatScreen(),
+  AddAdScreen.routeName: (context) => AddAdScreen(),
+  DashboardScreen.routeName: (context) => DashboardScreen(),
+  OwnerProfileScreen.routeName: (context) => OwnerProfileScreen(),
+  UserAccountScreen.routeName: (context) => UserAccountScreen(),
+  ChangePasswordScreen.routeName: (context) => ChangePasswordScreen()
 };

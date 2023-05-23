@@ -1,11 +1,8 @@
 // ignore_for_file: deprecated_member_use, unnecessary_string_interpolations
 
-import 'package:brandcrowd/screens/add_shop/add_shop_screen.dart';
-import 'package:brandcrowd/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../models/OwnerShops.dart';
-import '../screens/owner_shops/owner_shops_screen.dart';
 import '../size_config.dart';
 
 class OwnerShopCard extends StatelessWidget {
@@ -29,8 +26,8 @@ class OwnerShopCard extends StatelessWidget {
         child: GestureDetector(
           // onTap: () => Navigator.pushNamed(
           // context,
-          //AddShopScreen.routeName,
-          //arguments: ShopDetailsArguments(oshop: oshop),
+          // AddShopScreen.routeName,
+          // arguments: ShopDetailsArguments(oshop: oshop),
           // ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

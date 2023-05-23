@@ -1,9 +1,9 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:brandcrowd/components/default_button.dart';
-import 'package:brandcrowd/screens/add_product/components/heading.dart';
+import 'package:brandcrowd/screens/edit/components/heading.dart';
+import 'package:brandcrowd/screens/edit_product/edit_product_screen.dart';
 
-import 'package:brandcrowd/screens/edit_shop/edit_shop_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -149,9 +149,9 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: getProportionateScreenWidth(50)),
             DefaultButton(
-              text: "Add",
+              text: "Save",
               press: () {
-                Navigator.pushNamed(context, EditShopScreen.routeName);
+                Navigator.pop(context);
               },
             ),
           ],
