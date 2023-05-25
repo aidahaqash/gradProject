@@ -1,4 +1,5 @@
 import 'package:brandcrowd/components/default_button.dart';
+import 'package:brandcrowd/screens/payment_method/payment_method_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -78,7 +79,9 @@ class CheckoutCard extends StatelessWidget {
                   width: getProportionateScreenWidth(190),
                   child: DefaultButton(
                     text: "Check Out",
-                    press: () {},
+                    press: () {
+                      Navigator.pushNamed(context, PaymentScreen.routeName);
+                    },
                   ),
                 ),
               ],

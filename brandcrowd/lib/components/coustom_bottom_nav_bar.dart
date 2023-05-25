@@ -1,7 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:brandcrowd/screens/chats/chats_screen.dart';
 import 'package:brandcrowd/screens/home/home_screen.dart';
 import 'package:brandcrowd/screens/profile/profile_screen.dart';
+import 'package:brandcrowd/screens/wish_list/wish_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -52,11 +54,15 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
               IconButton(
                 icon: SvgPicture.asset("assets/icons/Heart Icon.svg"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, WishListScreen.routeName);
+                },
               ),
               IconButton(
                 icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, ChatsScreen.routeName);
+                },
               ),
               IconButton(
                 icon: SvgPicture.asset(

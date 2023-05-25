@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 
 import 'components/body.dart';
 
-class ProfileScreen extends StatelessWidget {
-  static String routeName = "/profile";
+class ChatsScreen extends StatelessWidget {
+  static String routeName = "/chats";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Profile", style: TextStyle(color: Colors.grey)),
+        title: const Text("Chats", style: TextStyle(color: Colors.grey)),
       ),
       body: Body(),
       bottomNavigationBar:

@@ -6,17 +6,17 @@ import 'package:flutter/material.dart';
 
 import 'components/body.dart';
 
-class ProfileScreen extends StatelessWidget {
-  static String routeName = "/profile";
+class WishListScreen extends StatelessWidget {
+  static String routeName = "/wishlist";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Profile", style: TextStyle(color: Colors.grey)),
+        title: const Text('Wish List', style: TextStyle(color: Colors.grey)),
       ),
       body: Body(),
       bottomNavigationBar:
-          const CustomBottomNavBar(selectedMenu: MenuState.profile),
+          const CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }
