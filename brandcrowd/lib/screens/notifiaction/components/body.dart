@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
+import 'package:brandcrowd/constants.dart';
 import 'package:brandcrowd/screens/order_status/order_status_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -29,7 +30,7 @@ class Body extends StatelessWidget {
             height: 0,
           );
         },
-        itemCount: 3);
+        itemCount: demoNotification.length);
   }
 }
 
@@ -62,14 +63,14 @@ Widget message(int index) {
       maxLines: 3,
       overflow: TextOverflow.ellipsis,
       text: TextSpan(
-          text: 'Your order has been placed ',
+          text: demoNotification[index].notification,
           style: TextStyle(
               fontSize: textsize,
               color: Colors.black,
               fontWeight: FontWeight.bold),
           children: [
             TextSpan(
-                text: "to check your order status,click here",
+                text: demoNotification[index].description,
                 style: TextStyle(fontWeight: FontWeight.w400))
           ]),
     ),
@@ -97,9 +98,11 @@ Widget prefixIcon() {
     height: 50,
     width: 50,
     padding: EdgeInsets.all(10),
-    decoration: BoxDecoration(shape: BoxShape.circle, color: Color(0xFFFFECDF)),
+    decoration:
+        BoxDecoration(shape: BoxShape.circle, color: kPrimaryLightColor),
     child: SvgPicture.asset(
       "assets/icons/Bell.svg",
+      color: kPrimaryColor,
     ),
   );
 }

@@ -1,11 +1,14 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:brandcrowd/screens/home/home_screen.dart';
+import 'package:brandcrowd/screens/owner_shops/components/owner_shops.dart';
+import 'package:brandcrowd/screens/owner_shops/owner_shops_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants.dart';
 import '../enums.dart';
+import '../screens/chats/chats_screen.dart';
 import '../screens/customer_shops/components/icon_btn_with_counter.dart';
 import '../screens/owner_profile/owner_profile_screen.dart';
 
@@ -49,12 +52,18 @@ class OwnerNavBar extends StatelessWidget {
                       : inActiveIconColor,
                 ),
                 onPressed: () =>
-                    Navigator.pushNamed(context, HomeScreen.routeName),
+                    Navigator.pushNamed(context, OwnerShopsScreen.routeName),
               ),
-              IconBtnWithCounter(
-                svgSrc: "assets/icons/Chat bubble Icon.svg",
-                numOfitem: 3,
-                press: () {},
+              IconButton(
+                icon: SvgPicture.asset(
+                  "assets/icons/Chat bubble Icon.svg",
+                  color: MenuState.message == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, ChatsScreen.routeName);
+                },
               ),
               IconButton(
                 icon: SvgPicture.asset(

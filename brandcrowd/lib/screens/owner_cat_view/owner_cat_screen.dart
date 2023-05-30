@@ -12,7 +12,7 @@ class ViewCatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Women', style: TextStyle(color: Colors.grey)),
+        title: const Text('Men', style: TextStyle(color: Colors.grey)),
       ),
       body: Body(),
       bottomNavigationBar: const OwnerNavBar(selectedMenu: MenuState.home),

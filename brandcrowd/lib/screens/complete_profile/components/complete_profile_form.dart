@@ -47,6 +47,8 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
           SizedBox(height: getProportionateScreenHeight(30)),
           buildPhoneNumberFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
+          buildCityFormField(),
+          SizedBox(height: getProportionateScreenHeight(30)),
           buildAddressFormField(),
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(40)),
@@ -80,12 +82,41 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       },
       decoration: const InputDecoration(
         labelText: "Address",
-        hintText: "Enter your phone address",
+        hintText: "Enter your address",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Icon(
           Icons.location_city,
+          color: kSecondaryColor,
+        ),
+      ),
+    );
+  }
+
+  TextFormField buildCityFormField() {
+    return TextFormField(
+      onSaved: (newValue) => address = newValue,
+      onChanged: (value) {
+        if (value.isNotEmpty) {
+          removeError(error: kAddressNullError);
+        }
+      },
+      validator: (value) {
+        if (value!.isEmpty) {
+          addError(error: kAddressNullError);
+          return "";
+        }
+        return null;
+      },
+      decoration: const InputDecoration(
+        labelText: "City",
+        hintText: "Enter your city",
+        // If  you are using latest version of flutter then lable text and hint text shown like this
+        // if you r using flutter less then 1.20.* then maybe this is not working properly
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        suffixIcon: Icon(
+          Icons.location_on,
           color: kSecondaryColor,
         ),
       ),

@@ -16,7 +16,7 @@ class WishListScreen extends StatelessWidget {
       ),
       body: Body(),
       bottomNavigationBar:
-          const CustomBottomNavBar(selectedMenu: MenuState.home),
+          const CustomBottomNavBar(selectedMenu: MenuState.favourite),
     );
   }
 }

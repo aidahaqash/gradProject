@@ -2,6 +2,7 @@
 
 import 'package:brandcrowd/components/default_button.dart';
 import 'package:brandcrowd/constants.dart';
+import 'package:brandcrowd/screens/owner_shops/owner_shops_screen.dart';
 import 'package:brandcrowd/screens/sign_in/sign_in_screen.dart';
 import 'package:brandcrowd/screens/customer_splash/components/customer_splash_content.dart';
 
@@ -19,16 +20,16 @@ class _BodyState extends State<Body> {
   List splashData = [
     {
       "text": "Welcome to BrandCrowd, Let's start",
-      "image": "assets/images/splash_1.png"
+      "image": "assets/images/splash_6.png"
     },
     {
       "text": "Open your own online buisness in one click",
-      "image": "assets/images/splash_2.png"
+      "image": "assets/images/splash_7.png"
     },
     {
       "text":
           "Manage your business from home \n and reach customers around the world easily ",
-      "image": "assets/images/splash_3.png"
+      "image": "assets/images/splash_8.png"
     },
   ];
   @override
@@ -70,7 +71,7 @@ class _BodyState extends State<Body> {
                           text: "Continue",
                           press: () {
                             Navigator.pushNamed(
-                                context, SignInScreen.routeName);
+                                context, OwnerShopsScreen.routeName);
                           },
                         ),
                         Spacer(),

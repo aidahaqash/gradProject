@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors
 
+import 'package:brandcrowd/constants.dart';
 import 'package:brandcrowd/screens/add_cat/add_cat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -27,7 +28,7 @@ class Categories extends StatelessWidget {
               (index) => CategoryCard(
                 icon: categories[index]["icon"],
                 text: categories[index]["text"],
-                color: const Color(0xFFFFECDF),
+                color: kPrimaryLightColor,
                 press: () {
                   Navigator.pushNamed(context, ViewCatScreen.routeName);
                 },

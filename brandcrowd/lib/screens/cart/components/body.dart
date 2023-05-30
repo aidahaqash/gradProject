@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api
 
+import 'package:brandcrowd/constants.dart';
 import 'package:brandcrowd/models/Cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -33,7 +34,7 @@ class _BodyState extends State<Body> {
             background: Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
-                color: const Color(0xFFFFE6E6),
+                color: kPrimaryLightColor,
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Row(

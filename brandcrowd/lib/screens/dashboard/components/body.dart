@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
                   horizontal: getProportionateScreenWidth(20)),
               child: SizedBox(
                   width: getProportionateScreenWidth(300),
-                  child: Image.asset("assets/images/statics.jpg")),
+                  child: Image.asset("assets/images/statics.png")),
             ),
             SizedBox(height: getProportionateScreenWidth(10)),
             Container(

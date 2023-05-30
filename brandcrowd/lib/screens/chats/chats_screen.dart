@@ -16,7 +16,7 @@ class ChatsScreen extends StatelessWidget {
       ),
       body: Body(),
       bottomNavigationBar:
-          const CustomBottomNavBar(selectedMenu: MenuState.profile),
+          const CustomBottomNavBar(selectedMenu: MenuState.message),
     );
   }
 }

@@ -33,7 +33,7 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Help Center",
             icon: "assets/icons/Question mark.svg",
-            press: () {},
+            press: () {}, //chat room with support
           ),
           ProfileMenu(
             text: "Log Out",

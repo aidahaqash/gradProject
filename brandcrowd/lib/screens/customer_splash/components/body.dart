@@ -19,15 +19,15 @@ class _BodyState extends State<Body> {
   List splashData = [
     {
       "text": "Welcome to BrandCrowd, Let’s shop!",
-      "image": "assets/images/splash_1.png"
-    },
-    {
-      "text": "We help people connect with store \n around the country",
       "image": "assets/images/splash_2.png"
     },
     {
-      "text": "We show the easy way to shop. \n Just stay at home with us",
+      "text": "We help people connect with store \n around the country",
       "image": "assets/images/splash_3.png"
+    },
+    {
+      "text": "We show the easy way to shop. \n Just stay at home with us",
+      "image": "assets/images/splash_4.png"
     },
   ];
   @override

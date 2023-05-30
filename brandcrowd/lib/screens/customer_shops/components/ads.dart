@@ -26,12 +26,12 @@ class Ads extends StatelessWidget {
           child: Row(
             children: [
               SpecialOfferCard(
-                image: "assets/images/fashion1.jpeg",
+                image: "assets/images/Discount.png",
                 category: "Discount up to 50% at Gucci",
                 press: () {},
               ),
               SpecialOfferCard(
-                image: "assets/images/fashion1.jpeg",
+                image: "assets/images/Discount.png",
                 category: "Check new arrivals at H&M",
                 press: () {},
               ),

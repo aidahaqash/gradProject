@@ -11,7 +11,10 @@ class UserAccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("My Account"),
+        title: const Text(
+          "My Account",
+          style: TextStyle(color: Colors.grey),
+        ),
       ),
       body: Body(),
       bottomNavigationBar: const OwnerNavBar(selectedMenu: MenuState.profile),

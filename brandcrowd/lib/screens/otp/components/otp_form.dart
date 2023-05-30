@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:brandcrowd/components/default_button.dart';
+import 'package:brandcrowd/screens/customer_shops/customer_shops_screen.dart';
 import 'package:brandcrowd/screens/home/home_screen.dart';
 import 'package:brandcrowd/size_config.dart';
 import 'package:flutter/material.dart';
@@ -113,7 +114,7 @@ class _OtpFormState extends State<OtpForm> {
           DefaultButton(
             text: "Continue",
             press: () {
-              Navigator.pushNamed(context, HomeScreen.routeName);
+              Navigator.pushNamed(context, ShopsScreen.routeName);
             },
           )
         ],

@@ -51,13 +51,4 @@ List<Shop> demoShops = [
     isFavourite: false,
     isPopular: true,
   ),
-  Shop(
-    id: 4,
-    image: "assets/images/wireless headset.png",
-    color: Color.fromARGB(255, 247, 255, 30),
-    title: "Nike",
-    rating: 4.8,
-    isFavourite: true,
-    isPopular: true,
-  ),
 ];

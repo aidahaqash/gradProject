@@ -7,7 +7,7 @@ import 'package:brandcrowd/screens/edit/components/body.dart';
 import 'package:flutter/material.dart';
 
 class EditScreen extends StatelessWidget {
-  static String routeName = "/edit";
+  static String routeName = "/editProduct";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

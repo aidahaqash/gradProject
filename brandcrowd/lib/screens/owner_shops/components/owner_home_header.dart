@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class OwnerHomeHeader extends StatelessWidget {
@@ -22,8 +23,46 @@ class OwnerHomeHeader extends StatelessWidget {
               color: Colors.black,
             ),
           ),
+          Spacer(),
+          Button(
+              press: () {},
+              color: Colors.white,
+              icon: Icon(
+                Icons.edit,
+                color: kPrimaryColor,
+              )),
+          Button(
+              press: () {
+                Navigator.pop(context);
+              },
+              color: Colors.white,
+              icon: Icon(
+                Icons.delete,
+                color: kPrimaryColor,
+              )),
         ],
       ),
     );
+  }
+}
+
+class Button extends StatelessWidget {
+  const Button({
+    Key? key,
+    required this.press,
+    required this.color,
+    required this.icon,
+  }) : super(key: key);
+  final GestureTapCallback press;
+  final Color color;
+  final Icon icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+        onTap: press,
+        child: Container(
+          child: icon,
+        ));
   }
 }

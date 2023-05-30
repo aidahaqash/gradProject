@@ -1,3 +1,4 @@
+import 'package:brandcrowd/screens/customer_shops/customer_shops_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/default_button.dart';
@@ -61,7 +62,7 @@ class _SignFormState extends State<SignForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
 
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                Navigator.pushNamed(context, ShopsScreen.routeName);
               }
             },
           ),

@@ -9,8 +9,13 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-class Body extends StatelessWidget {
-  // late String _chosenValue;
+class Body extends StatefulWidget {
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +24,6 @@ class Body extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: getProportionateScreenHeight(20)),
-            const Heading(),
             SizedBox(height: getProportionateScreenWidth(40)),
             Container(
               alignment: Alignment.topLeft,
@@ -63,6 +67,27 @@ class Body extends StatelessWidget {
                   hintText: "Add your description for ad."),
             ),
             SizedBox(height: getProportionateScreenWidth(20)),
+            Row(
+              children: <Widget>[
+                SizedBox(
+                  width: 10,
+                ), //SizedBox
+
+                Checkbox(
+                  value: isChecked,
+                  onChanged: (bool? value) {
+                    setState(() {
+                      isChecked = value!;
+                    });
+                  },
+                ),
+                Text(
+                  'Send Notification to customers',
+                  style: TextStyle(fontSize: 17.0),
+                ), //Text
+                SizedBox(width: 10),
+              ],
+            ),
             SizedBox(height: getProportionateScreenWidth(50)),
             DefaultButton(
               text: "Add",

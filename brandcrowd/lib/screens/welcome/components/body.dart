@@ -3,7 +3,9 @@
 //import 'package:brandcrowd/screens/customer_splash/customer_splash_screen.dart';
 
 import 'package:brandcrowd/screens/complete_profile/complete_profile_screen.dart';
+import 'package:brandcrowd/screens/customer_splash/customer_splash_screen.dart';
 import 'package:brandcrowd/screens/owner_shops/owner_shops_screen.dart';
+import 'package:brandcrowd/screens/owner_splash/owner_splash_screen.dart';
 import 'package:brandcrowd/screens/sign_in/sign_in_screen.dart';
 import 'package:brandcrowd/screens/sign_up/sign_up_screen.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +64,7 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                       text: "Customer",
                       press: () {
-                        Navigator.pushNamed(context, ShopsScreen.routeName);
+                        Navigator.pushNamed(context, SplashScreen.routeName);
                       },
                     ),
                     Spacer(flex: 1),
@@ -70,7 +72,7 @@ class _BodyState extends State<Body> {
                       text: "Business Owner",
                       press: () {
                         Navigator.pushNamed(
-                            context, OwnerShopsScreen.routeName);
+                            context, OwnerSplashScreen.routeName);
                       },
                     ),
                     Spacer(),

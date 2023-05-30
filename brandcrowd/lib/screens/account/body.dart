@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
               ),
-              labelText: "aida@gmail.com",
+              labelText: "michle@gmail.com",
               labelStyle: TextStyle(color: kPrimaryColor),
               hintStyle: TextStyle(color: Colors.grey),
             ),
@@ -47,7 +47,7 @@ class Body extends StatelessWidget {
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
               ),
-              labelText: "Aida Haqash",
+              labelText: "Michle Lor",
               labelStyle: TextStyle(color: kPrimaryColor),
               hintStyle: TextStyle(color: Colors.grey),
             ),
@@ -64,7 +64,7 @@ class Body extends StatelessWidget {
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
               ),
-              labelText: "0597596081",
+              labelText: "0597157894",
               labelStyle: TextStyle(color: kPrimaryColor),
               hintStyle: TextStyle(color: Colors.grey),
             ),

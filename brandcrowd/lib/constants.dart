@@ -1,12 +1,15 @@
 import 'package:brandcrowd/size_config.dart';
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Color(0xFFFF7643);
-const kPrimaryLightColor = Color(0xFFFFECDF);
+const kPrimaryColor = Color.fromARGB(255, 98, 0, 164);
+const kPrimaryLightColor = Color.fromARGB(255, 208, 159, 241);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
-  colors: [Color(0xFFFFA53E), Color(0xFFFF7643)],
+  colors: [
+    Color.fromARGB(255, 162, 59, 230),
+    Color.fromARGB(255, 112, 28, 168)
+  ],
 );
 const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF757575);

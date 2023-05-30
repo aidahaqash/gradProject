@@ -1,11 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
+import 'package:brandcrowd/screens/profile/components/profile_pic.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
-import '../owner_profile/components/profile_pic.dart';
 
 class Body extends StatelessWidget {
   @override

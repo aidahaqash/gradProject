@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:brandcrowd/constants.dart';
 import 'package:brandcrowd/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -38,8 +39,7 @@ class ShopCard extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.all(getProportionateScreenWidth(10)),
                   decoration: BoxDecoration(
-                    color:
-                        const Color.fromARGB(255, 238, 66, 66).withOpacity(0.5),
+                    color: kPrimaryLightColor.withOpacity(0.5),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Hero(
@@ -55,21 +55,13 @@ class ShopCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "${shop.title}:",
+                    "${shop.title}",
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(20),
                       fontWeight: FontWeight.w600,
                       color: Colors.black,
                     ),
                     maxLines: 2,
-                  ),
-                  Text(
-                    "${shop.rating}",
-                    style: TextStyle(
-                      fontSize: getProportionateScreenWidth(20),
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey,
-                    ),
                   ),
                   const Spacer(),
                   InkWell(

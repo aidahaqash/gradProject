@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: getProportionateScreenWidth(20)),
-            child: SectionTitle(title: "Check Out New Products", press: () {}),
+            child: SectionTitle(title: "Men", press: () {}),
           ),
           Expanded(
             child: Padding(

@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:brandcrowd/screens/chats/chats_screen.dart';
+import 'package:brandcrowd/screens/customer_shops/customer_shops_screen.dart';
 import 'package:brandcrowd/screens/home/home_screen.dart';
 import 'package:brandcrowd/screens/profile/profile_screen.dart';
 import 'package:brandcrowd/screens/wish_list/wish_list_screen.dart';
@@ -50,16 +51,26 @@ class CustomBottomNavBar extends StatelessWidget {
                       : inActiveIconColor,
                 ),
                 onPressed: () =>
-                    Navigator.pushNamed(context, HomeScreen.routeName),
+                    Navigator.pushNamed(context, ShopsScreen.routeName),
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Heart Icon.svg"),
+                icon: SvgPicture.asset(
+                  "assets/icons/Heart Icon.svg",
+                  color: MenuState.favourite == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
                 onPressed: () {
                   Navigator.pushNamed(context, WishListScreen.routeName);
                 },
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg"),
+                icon: SvgPicture.asset(
+                  "assets/icons/Chat bubble Icon.svg",
+                  color: MenuState.message == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
                 onPressed: () {
                   Navigator.pushNamed(context, ChatsScreen.routeName);
                 },

@@ -72,16 +72,6 @@ class Body extends StatelessWidget {
                   hintStyle: TextStyle(color: Colors.grey),
                   hintText: "Describe Your Shop (20 words)"),
             ),
-            TextField(
-              decoration: InputDecoration(
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(width: 1, color: Colors.grey),
-                  ),
-                  labelText: "Background Color",
-                  labelStyle: TextStyle(color: kPrimaryColor),
-                  hintStyle: TextStyle(color: Colors.grey),
-                  hintText: "Choose Background Color For Your Shop"),
-            ),
             SizedBox(height: getProportionateScreenWidth(50)),
             DefaultButton(
               text: "Continue",

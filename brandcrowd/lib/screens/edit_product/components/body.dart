@@ -1,8 +1,10 @@
 import 'package:brandcrowd/components/default_button.dart';
+import 'package:brandcrowd/constants.dart';
 import 'package:brandcrowd/size_config.dart';
 import 'package:flutter/material.dart';
 
 import '../../../models/OwnerProduct.dart';
+import '../../edit/edit_screen.dart';
 import 'color_dots.dart';
 import 'product_description.dart';
 import 'top_rounded_container.dart';
@@ -40,29 +42,30 @@ class Body extends StatelessWidget {
                             bottom: getProportionateScreenWidth(40),
                             top: getProportionateScreenWidth(15),
                           ),
-                          // child: Button(
-                          //   text: "Edit",
-                          //   press: () {},
-                          //   color: Colors.yellow,
-                          //   icon: Icon(Icons.edit),
-                          // )
                           child: Container(
                               alignment: Alignment.center,
                               child: Row(
                                 children: [
                                   Button(
-                                      text: "Edit",
-                                      press: () {},
-                                      color: Color.fromARGB(255, 247, 234, 118),
-                                      icon: Icon(Icons.edit)),
+                                      press: () {
+                                        Navigator.pushNamed(
+                                            context, EditScreen.routeName);
+                                      },
+                                      color: Colors.grey.withOpacity(0.1),
+                                      icon: Icon(
+                                        Icons.edit,
+                                        color: kPrimaryColor,
+                                      )),
                                   Spacer(),
                                   Button(
-                                      text: "Delete",
                                       press: () {
                                         Navigator.pop(context);
                                       },
-                                      color: Color.fromARGB(255, 246, 112, 102),
-                                      icon: Icon(Icons.delete)),
+                                      color: Colors.grey.withOpacity(0.1),
+                                      icon: Icon(
+                                        Icons.delete,
+                                        color: kPrimaryColor,
+                                      )),
                                 ],
                               ))),
                     ),
@@ -80,34 +83,20 @@ class Body extends StatelessWidget {
 class Button extends StatelessWidget {
   const Button({
     Key? key,
-    required this.text,
     required this.press,
     required this.color,
     required this.icon,
   }) : super(key: key);
-  final String text;
-  final VoidCallback press;
+  final GestureTapCallback press;
   final Color color;
   final Icon icon;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: getProportionateScreenWidth(100),
-      height: getProportionateScreenHeight(40),
-      child: FloatingActionButton.extended(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        backgroundColor: color,
-        onPressed: press,
-        icon: icon,
-        label: Text(
-          text,
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(18),
-            color: Colors.white,
-          ),
-        ),
-      ),
-    );
+    return GestureDetector(
+        onTap: press,
+        child: Container(
+          child: icon,
+        ));
   }
 }

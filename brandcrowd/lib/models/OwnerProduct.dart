@@ -23,25 +23,25 @@ class OProduct {
 // Our demo Products
 
 List<OProduct> demoProducts = [
-  OProduct(
-    id: 0,
-    images: [
-      "assets/images/ps4_console_white_1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
-    ],
-    colors: [
-      const Color(0xFFF6625E),
-      const Color(0xFF836DB8),
-      const Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Wireless Controller for PS4™",
-    price: 64.99,
-    description: description,
-    rating: 4.8,
-  ),
+  // OProduct(
+  //   id: 0,
+  //   images: [
+  //     "assets/images/ps4_console_white_1.png",
+  //     "assets/images/ps4_console_white_2.png",
+  //     "assets/images/ps4_console_white_3.png",
+  //     "assets/images/ps4_console_white_4.png",
+  //   ],
+  //   colors: [
+  //     const Color(0xFFF6625E),
+  //     const Color(0xFF836DB8),
+  //     const Color(0xFFDECB9C),
+  //     Colors.white,
+  //   ],
+  //   title: "Wireless Controller for PS4™",
+  //   price: 64.99,
+  //   description: description,
+  //   rating: 4.8,
+  // ),
   OProduct(
     id: 1,
     images: [
@@ -74,22 +74,22 @@ List<OProduct> demoProducts = [
     description: description,
     rating: 4.1,
   ),
-  OProduct(
-    id: 3,
-    images: [
-      "assets/images/wireless headset.png",
-    ],
-    colors: [
-      const Color(0xFFF6625E),
-      const Color(0xFF836DB8),
-      const Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Logitech Head",
-    price: 20.20,
-    description: description,
-    rating: 4.1,
-  ),
+  // OProduct(
+  //   id: 3,
+  //   images: [
+  //     "assets/images/wireless headset.png",
+  //   ],
+  //   colors: [
+  //     const Color(0xFFF6625E),
+  //     const Color(0xFF836DB8),
+  //     const Color(0xFFDECB9C),
+  //     Colors.white,
+  //   ],
+  //   title: "Logitech Head",
+  //   price: 20.20,
+  //   description: description,
+  //   rating: 4.1,
+  // ),
 ];
 
 const String description =

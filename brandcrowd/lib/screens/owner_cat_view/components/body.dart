@@ -1,11 +1,13 @@
 // ignore_for_file: use_key_in_widget_constructors
 
+import 'package:brandcrowd/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../components/owner_product_card.dart';
 import '../../../models/OwnerProduct.dart';
 import '../../../size_config.dart';
+import '../../edit/edit_screen.dart';
 
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
@@ -18,24 +20,30 @@ class Body extends StatelessWidget {
           children: [
             SizedBox(height: getProportionateScreenHeight(20)),
             CategoryCard(
-              icon: "assets/icons/woman.svg",
-              text: "Women",
+              icon: "assets/icons/man.svg",
+              text: "Men",
               press: () {},
-              color: const Color(0xFFFFECDF),
+              color: kPrimaryLightColor,
             ),
             Spacer(),
             Button(
-                text: "Edit",
-                press: () {},
-                color: Color.fromARGB(255, 247, 234, 118),
-                icon: Icon(Icons.edit)),
+                press: () {
+                  Navigator.pushNamed(context, EditScreen.routeName);
+                },
+                color: Colors.white,
+                icon: Icon(
+                  Icons.edit,
+                  color: kPrimaryColor,
+                )),
             Button(
-                text: "Delete",
                 press: () {
                   Navigator.pop(context);
                 },
-                color: Color.fromARGB(255, 246, 112, 102),
-                icon: Icon(Icons.delete)),
+                color: Colors.white,
+                icon: Icon(
+                  Icons.delete,
+                  color: kPrimaryColor,
+                )),
           ],
         ),
         SizedBox(height: getProportionateScreenWidth(10)),
@@ -106,34 +114,20 @@ class CategoryCard extends StatelessWidget {
 class Button extends StatelessWidget {
   const Button({
     Key? key,
-    required this.text,
     required this.press,
     required this.color,
     required this.icon,
   }) : super(key: key);
-  final String text;
-  final VoidCallback press;
+  final GestureTapCallback press;
   final Color color;
   final Icon icon;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: getProportionateScreenWidth(100),
-      height: getProportionateScreenHeight(40),
-      child: FloatingActionButton.extended(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        backgroundColor: color,
-        onPressed: press,
-        icon: icon,
-        label: Text(
-          text,
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(18),
-            color: Colors.white,
-          ),
-        ),
-      ),
-    );
+    return GestureDetector(
+        onTap: press,
+        child: Container(
+          child: icon,
+        ));
   }
 }

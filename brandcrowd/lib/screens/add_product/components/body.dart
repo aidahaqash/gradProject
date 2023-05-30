@@ -9,8 +9,27 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-class Body extends StatelessWidget {
-  // late String _chosenValue;
+const List<String> list = <String>[
+  '  Women',
+  '  Men',
+  '  Kids',
+  '  Add New Category...                                                                 '
+];
+
+class Body extends StatefulWidget {
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  String dropdownValue = list.first;
+
+  bool red = false;
+  bool blue = false;
+  bool white = false;
+  bool black = false;
+  bool green = false;
+  bool yellow = false;
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +69,41 @@ class Body extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: getProportionateScreenHeight(40),
+            ),
+            Container(
+              alignment: Alignment.centerLeft,
+              child: DropdownButton<String>(
+                value: dropdownValue,
+                icon: const Icon(Icons.arrow_drop_down),
+                elevation: 30,
+                hint: Text(
+                  "Select Category",
+                  style: TextStyle(
+                      color: kPrimaryColor,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500),
+                ),
+                style: const TextStyle(color: kPrimaryColor),
+                underline: Container(
+                  height: 1,
+                  color: Colors.grey,
+                ),
+                onChanged: (String? value) {
+                  // This is called when the user selects an item.
+                  setState(() {
+                    dropdownValue = value!;
+                  });
+                },
+                items: list.map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+              ),
+            ),
             SizedBox(height: getProportionateScreenWidth(10)),
             SizedBox(height: getProportionateScreenWidth(40)),
             TextField(
@@ -63,36 +117,6 @@ class Body extends StatelessWidget {
                   hintText: "Enter product name"),
             ),
             SizedBox(height: getProportionateScreenWidth(20)),
-            // DropdownButton<String>(
-            //   focusColor: Colors.white,
-            //   value: _chosenValue,
-            //   //elevation: 5,
-            //   style: TextStyle(color: Colors.white),
-            //   iconEnabledColor: Colors.black,
-            //   items: <String>['Women', 'Men', 'add new category']
-            //       .map<DropdownMenuItem<String>>((String value) {
-            //     return DropdownMenuItem<String>(
-            //       value: value,
-            //       child: Text(
-            //         value,
-            //         style: TextStyle(color: Colors.black),
-            //       ),
-            //     );
-            //   }).toList(),
-            //   hint: Text(
-            //     "Product Category",
-            //     style: TextStyle(
-            //         color: Colors.black,
-            //         fontSize: 14,
-            //         fontWeight: FontWeight.w500),
-            //   ),
-            //   onChanged: (String? value) {
-            //     setState(() {
-            //       _chosenValue = value!;
-            //     });
-            //   },
-            // ),
-            // SizedBox(height: getProportionateScreenWidth(50)),
             TextField(
               maxLines: 5,
               decoration: InputDecoration(
@@ -126,17 +150,115 @@ class Body extends StatelessWidget {
                   hintText: "Quantity of product in stock"),
             ),
             SizedBox(height: getProportionateScreenWidth(50)),
-            TextField(
-              decoration: InputDecoration(
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(width: 1, color: Colors.grey),
-                  ),
-                  labelText: "Colors",
-                  labelStyle: TextStyle(color: kPrimaryColor),
-                  hintStyle: TextStyle(color: Colors.grey),
-                  hintText: "Available colors for product"),
+            Container(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Check Product Colors",
+                style: TextStyle(color: kPrimaryColor, fontSize: 20),
+              ),
             ),
-            SizedBox(height: getProportionateScreenWidth(50)),
+            SizedBox(height: getProportionateScreenWidth(10)),
+            Column(
+              children: [
+                Row(children: [
+                  Checkbox(
+                    value: red,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        red = value!;
+                      });
+                    },
+                  ),
+                  Text(
+                    "Red",
+                    style: TextStyle(color: Colors.red, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: getProportionateScreenWidth(10),
+                  ),
+                  Checkbox(
+                    value: blue,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        blue = value!;
+                      });
+                    },
+                  ),
+                  Text(
+                    "Blue",
+                    style: TextStyle(color: Colors.blue, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: getProportionateScreenWidth(10),
+                  ),
+                  Checkbox(
+                    value: black,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        black = value!;
+                      });
+                    },
+                  ),
+                  Text(
+                    "Black",
+                    style: TextStyle(color: Colors.black, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: getProportionateScreenWidth(10),
+                  ),
+                ]),
+                Row(
+                  children: [
+                    Checkbox(
+                      value: white,
+                      onChanged: (bool? value) {
+                        setState(() {
+                          white = value!;
+                        });
+                      },
+                    ),
+                    Text(
+                      "White",
+                      style: TextStyle(color: Colors.grey, fontSize: 20),
+                    ),
+                    SizedBox(
+                      width: getProportionateScreenWidth(10),
+                    ),
+                    Checkbox(
+                      value: green,
+                      onChanged: (bool? value) {
+                        setState(() {
+                          green = value!;
+                        });
+                      },
+                    ),
+                    Text(
+                      "Green",
+                      style: TextStyle(color: Colors.green, fontSize: 20),
+                    ),
+                    SizedBox(
+                      width: getProportionateScreenWidth(10),
+                    ),
+                    Checkbox(
+                      value: yellow,
+                      onChanged: (bool? value) {
+                        setState(() {
+                          yellow = value!;
+                        });
+                      },
+                    ),
+                    Text(
+                      "Yellow",
+                      style: TextStyle(color: Colors.yellow, fontSize: 20),
+                    ),
+                    SizedBox(
+                      width: getProportionateScreenWidth(10),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: getProportionateScreenWidth(40)),
             TextField(
               decoration: InputDecoration(
                   enabledBorder: UnderlineInputBorder(
