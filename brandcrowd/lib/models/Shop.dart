@@ -1,6 +1,9 @@
 // ignore_for_file: file_names, prefer_const_constructors
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class Shop {
   final int id;
@@ -8,7 +11,7 @@ class Shop {
   final String image;
   final Color color;
   final double rating;
-  final bool isFavourite, isPopular;
+  final bool isFavourite;
 
   Shop({
     required this.id,
@@ -16,12 +19,35 @@ class Shop {
     required this.color,
     this.rating = 0.0,
     this.isFavourite = false,
-    this.isPopular = false,
     required this.title,
   });
 }
 
-// Our demo Products
+// Future<List<Shop>> fetchShopData() async {
+//   var url = Uri.parse(
+//       'https://api.example.com/shops'); // Replace with your API endpoint URL
+
+//   var response = await http.get(url);
+
+//   if (response.statusCode == 200) {
+//     var data = json.decode(response.body) as List<dynamic>;
+
+//     List<Shop> demoShops = data
+//         .map((item) => Shop(
+//               id: item['id'],
+//               title: item['Name'],
+//               image: item['logourl'],
+//               color: Color.fromARGB(255, 247, 255, 30),
+//               rating: item['rating'],
+//               isFavourite: item['isFavourite'],
+//             ))
+//         .toList();
+
+//     return demoShops;
+//   } else {
+//     throw Exception('Failed to fetch shop data');
+//   }
+// }
 
 List<Shop> demoShops = [
   Shop(
@@ -31,7 +57,6 @@ List<Shop> demoShops = [
     title: "Gucci",
     rating: 4.8,
     isFavourite: false,
-    isPopular: true,
   ),
   Shop(
     id: 2,
@@ -40,7 +65,6 @@ List<Shop> demoShops = [
     title: "Sephora",
     rating: 4.8,
     isFavourite: true,
-    isPopular: true,
   ),
   Shop(
     id: 3,
@@ -49,6 +73,5 @@ List<Shop> demoShops = [
     title: "Adidas",
     rating: 4.8,
     isFavourite: false,
-    isPopular: true,
   ),
 ];

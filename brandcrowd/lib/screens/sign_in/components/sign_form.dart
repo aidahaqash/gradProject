@@ -1,6 +1,6 @@
 import 'package:brandcrowd/screens/customer_shops/customer_shops_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'package:http/http.dart' as http;
 import '../../../components/default_button.dart';
 import '../../../components/form_error.dart';
 import '../../../constants.dart';
@@ -17,10 +17,40 @@ class SignForm extends StatefulWidget {
 
 class _SignFormState extends State<SignForm> {
   final _formKey = GlobalKey<FormState>();
-  late String email;
-  late String password;
+  String email = '';
+  String password = '';
   bool remember = false;
   final List<String> errors = [];
+
+  Future<void> loginToAPI() async {
+    var url = Uri.parse(
+        'http://10.0.2.2:8000/api/login'); // Replace with your login API endpoint URL
+
+    var body = {
+      'email': email,
+      'password': password,
+    }; // Replace with the actual username and password
+    try {
+      var response = await http.post(url, body: body);
+
+      if (response.statusCode == 200) {
+        // Login successful
+        print('Login successful');
+        var responseData = response.body;
+        Navigator.pushNamed(context, ShopsScreen.routeName);
+      } else {
+        // Login failed
+        print('Login failed with status: ${response.statusCode}');
+        setState(() {
+          errors.add("Email or Password wrong");
+        });
+      }
+    } catch (e) {
+      // Error occurred during login
+      print('Error during login: $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -62,7 +92,7 @@ class _SignFormState extends State<SignForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
 
-                Navigator.pushNamed(context, ShopsScreen.routeName);
+                loginToAPI();
               }
             },
           ),

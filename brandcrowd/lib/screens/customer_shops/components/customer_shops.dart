@@ -25,8 +25,7 @@ class Shops extends StatelessWidget {
               ...List.generate(
                 demoShops.length,
                 (index) {
-                  if (demoShops[index].isPopular)
-                    return ShopCard(shop: demoShops[index]);
+                  if (true) return ShopCard(shop: demoShops[index]);
 
                   return const SizedBox
                       .shrink(); // here by default width and height is 0
